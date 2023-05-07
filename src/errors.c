@@ -6,7 +6,7 @@
 /*   By: vinni <vinni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:51:43 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/05 18:53:35 by vinni            ###   ########.fr       */
+/*   Updated: 2023/05/07 13:03:06 by vinni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_has_duplicate_numbers(t_stack **stack)
 				count++;
 			comparison_node = comparison_node->next;
 		}
-		if (count == 1)
+		if (count > 1)
 			return (1);
 		current_node = current_node->next;
 	}
