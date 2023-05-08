@@ -6,7 +6,7 @@
 /*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:51:43 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/08 10:19:54 by vipalaci         ###   ########.fr       */
+/*   Updated: 2023/05/08 12:42:48 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,6 @@ void	ft_exit_program(int error_code, t_stack **stack)
 	if (stack)
 		ft_free_stack(stack);
 	if (error_code != EXIT_SUCCESS)
-	{
-		if (error_code == 2)
-			ft_printf("Error: There are duplicate numbers\n");
-		else
-			write(2, "Error\n", 6);
-	}
+		write(2, "Error\n", 6);
 	exit(error_code);
 }

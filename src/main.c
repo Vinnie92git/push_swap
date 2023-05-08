@@ -6,7 +6,7 @@
 /*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 11:36:24 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/08 11:05:10 by vipalaci         ###   ########.fr       */
+/*   Updated: 2023/05/08 12:43:02 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		if (!ft_init_stack(argv, &a_stack))
-			ft_exit_program(1, &a_stack);
+			ft_exit_program(2, &a_stack);
 		if (ft_has_duplicate_numbers(&a_stack))
 			ft_exit_program(2, &a_stack);
 		stack_size = ft_stack_size(a_stack);
