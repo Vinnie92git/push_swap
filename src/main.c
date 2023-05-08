@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinni <vinni@student.42.fr>                +#+  +:+       +#+        */
+/*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 11:36:24 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/05 18:55:48 by vinni            ###   ########.fr       */
+/*   Updated: 2023/05/08 11:05:10 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	ft_init_stack(char **args, t_stack **stack)
 			j = 0;
 			while (str[j])
 			{
-				if (ft_atoi(str[j]) == 0)
+				if (ft_atol(str[j]) < INT_MIN || ft_atol(str[j]) > INT_MAX)
 					return (0);
-				ft_add_tail(stack, ft_new_node(ft_atoi(str[j])));
+				ft_add_tail(stack, ft_new_node(ft_atol(str[j])));
 				j++;
 			}
 			i++;

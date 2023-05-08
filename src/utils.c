@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinni <vinni@student.42.fr>                +#+  +:+       +#+        */
+/*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:25:47 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/05 17:57:13 by vinni            ###   ########.fr       */
+/*   Updated: 2023/05/08 11:26:10 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 #include <push_swap.h>
 
-int	ft_atoi_ps(char *str)
+long	ft_atol(char *str)
 {
 	int			i;
 	int			sign;
@@ -36,9 +36,7 @@ int	ft_atoi_ps(char *str)
 		i++;
 	}
 	number *= sign;
-	if (number < INT_MIN || number > INT_MAX)
-		return (0);
-	return ((int)number);
+	return (number);
 }
 
 int	ft_nb_abs(int nb)
