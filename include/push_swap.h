@@ -6,7 +6,7 @@
 /*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 11:38:24 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/08 11:25:58 by vipalaci         ###   ########.fr       */
+/*   Updated: 2023/05/08 13:47:46 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,9 @@ void	ft_free_stack(t_stack **stack);
 void	ft_add_head(t_stack **stack, t_stack *node);
 void	ft_add_tail(t_stack **stack, t_stack *node);
 void	ft_assign_index(t_stack *a_stack, int stack_size);
+void	ft_free_array(char **str);
 
+int		ft_generate_stack(char **str, t_stack **stack);
 int		ft_input_check(char **str);
 int		ft_has_duplicate_numbers(t_stack **stack);
 int		ft_init_stack(char **args, t_stack **stack);

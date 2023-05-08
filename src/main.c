@@ -6,7 +6,7 @@
 /*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 11:36:24 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/08 12:43:02 by vipalaci         ###   ########.fr       */
+/*   Updated: 2023/05/08 13:49:21 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,29 @@ int	ft_init_stack(char **args, t_stack **stack)
 		str = ft_split(args[i], ' ');
 		if (ft_input_check(str) == 1)
 		{
-			j = 0;
-			while (str[j])
-			{
-				if (ft_atol(str[j]) < INT_MIN || ft_atol(str[j]) > INT_MAX)
-					return (0);
-				ft_add_tail(stack, ft_new_node(ft_atol(str[j])));
-				j++;
-			}
+			if (!ft_generate_stack(str, stack))
+				return (0);
 			i++;
 		}
 		else
 			return (0);
 	}
+	return (1);
+}
+
+int	ft_generate_stack(char **str, t_stack **stack)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (ft_atol(str[i]) < INT_MIN || ft_atol(str[i]) > INT_MAX)
+			return (0);
+		ft_add_tail(stack, ft_new_node(ft_atol(str[i])));
+		i++;
+	}
+	ft_free_array(str);
 	return (1);
 }
 
@@ -80,7 +90,7 @@ int	main(int argc, char **argv)
 		stack_size = ft_stack_size(a_stack);
 		ft_assign_index(a_stack, stack_size + 1);
 		ft_push_swap(&a_stack, &b_stack, stack_size);
-		ft_exit_program(EXIT_SUCCESS, 0);
+		ft_exit_program(EXIT_SUCCESS, &a_stack);
 	}
 	else
 		ft_exit_program(0, 0);

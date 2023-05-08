@@ -6,7 +6,7 @@
 /*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:51:43 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/08 12:42:48 by vipalaci         ###   ########.fr       */
+/*   Updated: 2023/05/08 13:37:44 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,21 @@ void	ft_exit_program(int error_code, t_stack **stack)
 	if (error_code != EXIT_SUCCESS)
 		write(2, "Error\n", 6);
 	exit(error_code);
+}
+
+void	ft_free_array(char **str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return ;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str[i]);
+	free(str);
+	return ;
 }
