@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinni <vinni@student.42.fr>                +#+  +:+       +#+        */
+/*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:51:43 by vipalaci          #+#    #+#             */
-/*   Updated: 2023/05/07 13:03:06 by vinni            ###   ########.fr       */
+/*   Updated: 2023/05/08 10:19:54 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_input_check(char **str)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
 	while (str[i])
 	{

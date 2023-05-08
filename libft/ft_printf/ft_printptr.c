@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinni <vinni@student.42.fr>                +#+  +:+       +#+        */
+/*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 19:58:12 by vinni             #+#    #+#             */
-/*   Updated: 2023/04/10 19:11:49 by vinni            ###   ########.fr       */
+/*   Updated: 2023/05/08 10:15:05 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_putptr(uintptr_t n)
 	}
 	else
 	{
-		if(n <= 9)
+		if (n <= 9)
 			ft_putchar_fd(n + '0', 1);
 		else
 			ft_putchar_fd((n - 10) + 'a', 1);

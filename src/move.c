@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinni <vinni@student.42.fr>                +#+  +:+       +#+        */
+/*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 20:36:16 by vinni             #+#    #+#             */
-/*   Updated: 2023/05/05 17:48:38 by vinni            ###   ########.fr       */
+/*   Updated: 2023/05/08 10:19:05 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ static void	ft_rev_rotate_both(t_stack **a_stack, t_stack **b_stack,
 	}
 }
 
-static void	ft_rotate_both(t_stack **a_stack, t_stack **b_stack, int *cost_a, int *cost_b)
+static void	ft_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 {
 	while (*cost_a > 0 && *cost_b > 0)
 	{
 		(*cost_a)--;
 		(*cost_b)--;
-		ft_rr(a_stack, b_stack);
+		ft_rr(a, b);
 	}
 }
 

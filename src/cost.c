@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cost.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinni <vinni@student.42.fr>                +#+  +:+       +#+        */
+/*   By: vipalaci <vipalaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 20:29:43 by vinni             #+#    #+#             */
-/*   Updated: 2023/05/05 17:48:12 by vinni            ###   ########.fr       */
+/*   Updated: 2023/05/08 10:19:32 by vipalaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ void	ft_cheapest_move(t_stack **a_stack, t_stack **b_stack)
 	cheapest = INT_MAX;
 	while (tmp)
 	{
-		if (ft_nb_abs(tmp->cost_a) + ft_nb_abs(tmp->cost_b) < ft_nb_abs(cheapest))
+		if (ft_nb_abs(tmp->cost_a) + ft_nb_abs(tmp->cost_b)
+			< ft_nb_abs(cheapest))
 		{
 			cheapest = ft_nb_abs(tmp->cost_b) + ft_nb_abs(tmp->cost_a);
 			cost_a = tmp->cost_a;
