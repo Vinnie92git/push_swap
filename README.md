@@ -1,4 +1,4 @@
-# push_swap_vini
+# push_swap
 
 
 Push_swap es un proyecto de algoritmia simple y muy efectivo: tienes que ordenar
